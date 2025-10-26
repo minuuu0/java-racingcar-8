@@ -1,6 +1,8 @@
 package racingcar;
 
 public class Car {
+    private static final int MOVE_THRESHOLD = 4;
+
     final String name;
     long position;
 
@@ -14,8 +16,10 @@ public class Car {
         return name;
     }
 
-    public void move() {
-        this.position++;
+    public void moveIfPossible(int randomValue) {
+        if (randomValue >= MOVE_THRESHOLD) {
+            this.position++;
+        }
     }
 
     public long getPosition() {

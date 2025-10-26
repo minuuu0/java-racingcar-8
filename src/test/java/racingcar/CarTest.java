@@ -43,11 +43,20 @@ public class CarTest {
     }
 
     @Test
-    void 자동차가_전진하면_위치가_1증가한다() {
+    void 랜덤값이_4_이상이면_전진한다() {
         Car car = new Car("pobi");
 
-        car.move();
+        car.moveIfPossible(4);
 
         assertThat(car.getPosition()).isEqualTo(1);
+    }
+
+    @Test
+    void 랜덤값이_3_이하면_전진하지_않는다() {
+        Car car = new Car("pobi");
+
+        car.moveIfPossible(3);
+
+        assertThat(car.getPosition()).isEqualTo(0);
     }
 }
