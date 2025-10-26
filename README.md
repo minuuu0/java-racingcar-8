@@ -17,14 +17,14 @@
 
 ### 입력 기능
 
-- [ ] 자동차 이름을 입력하면 자동차가 생성된다
-- [ ] 자동차를 쉼표로 구분하여 여러 대 자동차를 생성할 수 있다
-- [ ] 자동차 이름을 심표 외 다른 문자로 구분하는 경우 IllegalArgumentException을 발생한다
-- [ ] 이름을 6자 이상 작성하면 IllegalArgumentException을 발생한다
-- [ ] 이름을 작성하지 않으면 IllegalArgumentException을 발생한다
-- [ ] 이동 횟수를 숫자로 입력하면 자동차가 이동한다
-- [ ] 이동 횟수를 숫자로 입력하지 않으면 IllegalArgumentException을 발생한다
-- [ ] 이동 횟수를 0 이하로 입력하면 IllegalArgumentException을 발생한다
+- [x] 자동차 이름을 입력하면 자동차가 생성된다
+- [x] 자동차를 쉼표로 구분하여 여러 대 자동차를 생성할 수 있다
+- [x] 자동차 이름을 심표 외 다른 문자로 구분하는 경우 IllegalArgumentException을 발생한다
+- [x] 이름을 6자 이상 작성하면 IllegalArgumentException을 발생한다
+- [x] 이름을 작성하지 않으면 IllegalArgumentException을 발생한다
+- [x] 이동 횟수를 숫자로 입력하면 자동차가 이동한다
+- [x] 이동 횟수를 숫자로 입력하지 않으면 IllegalArgumentException을 발생한다
+- [x] 이동 횟수를 0 이하로 입력하면 IllegalArgumentException을 발생한다
 
 ### 경주 기능
 
@@ -74,10 +74,10 @@ jun : -----
 
 ### 자동차 이름 규칙
 
-- **자동차 이름은 영문자(대소문자)와 한글만 허용합니다.**
+- **자동차 이름은 영문자(대소문자)만 허용합니다.**
     - 숫자, 특수문자, 공백은 모두 불가합니다.
-    - 예: `pobi`, `우테코`, `Car` (허용)
-    - 예: `pobi1`, `우테-코`, `car name` (불가)
+    - 예: `pobi`, `Car` (허용)
+    - 예: `pobi1`, `car name` (불가)
 
 ### "쉼표 외 다른 문자로 구분" 예외 처리
 
