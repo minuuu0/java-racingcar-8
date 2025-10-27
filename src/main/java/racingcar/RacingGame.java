@@ -14,7 +14,7 @@ class RacingGame {
         OutputView.printRaceStart();
         for (int i = 0; i < attemptCount; i++) {
             cars.moveAllWith(RandomNumberGenerator::generate);
-            OutputView.printRoundResult(cars.formatRoundResult());
+            OutputView.printRoundResult(cars.getCarNames(), cars.getCarPositions());
         }
     }
 

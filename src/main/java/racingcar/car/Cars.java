@@ -29,19 +29,16 @@ public class Cars {
         }
     }
 
-    public String formatRoundResult() {
-        StringBuilder result = new StringBuilder();
-        for (Car car : cars) {
-            result.append(formatCarPosition(car));
-            result.append(System.lineSeparator());
-        }
-        return result.toString();
+    public List<String> getCarNames() {
+        return cars.stream()
+                .map(Car::getName)
+                .toList();
     }
 
-    private String formatCarPosition(Car car) {
-        String positionSymbol = "-";
-        String separator = " : ";
-        return car.getName() + separator + positionSymbol.repeat((int) car.getPosition());
+    public List<Long> getCarPositions() {
+        return cars.stream()
+                .map(Car::getPosition)
+                .toList();
     }
 
     public List<String> getWinners() {
