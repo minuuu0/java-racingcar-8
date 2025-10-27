@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.car;
 
 class CarValidator {
     private static final String VALID_NAME_PATTERN = "[a-zA-Z]+";

@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.car;
 
 class Car {
     private static final int MOVE_THRESHOLD = 4;
@@ -10,6 +10,11 @@ class Car {
         CarValidator.validateName(name);
         this.name = name;
         this.position = 0L;
+    }
+
+    Car(String name, long position) {
+        this.name = name;
+        this.position = position;
     }
 
     String getName() {

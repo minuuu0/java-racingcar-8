@@ -1,5 +1,6 @@
 package racingcar;
 
+import racingcar.car.Cars;
 import java.util.List;
 
 class RacingGame {

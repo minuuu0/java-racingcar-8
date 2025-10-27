@@ -1,12 +1,13 @@
-package racingcar;
+package racingcar.car;
 
+import racingcar.RandomNumberGenerator;
 import java.util.List;
 import java.util.function.IntSupplier;
 
-class Cars {
+public class Cars {
     private final List<Car> cars;
 
-    Cars(List<String> carNames) {
+    public Cars(List<String> carNames) {
         this.cars = carNames.stream()
                 .map(Car::new)
                 .toList();
@@ -20,18 +21,18 @@ class Cars {
         return cars;
     }
 
-    void moveAll() {
+    public void moveAll() {
         moveAllWith(RandomNumberGenerator::generate);
     }
 
-    void moveAllWith(IntSupplier randomSupplier) {
+    public void moveAllWith(IntSupplier randomSupplier) {
         for (Car car : cars) {
             int randomValue = randomSupplier.getAsInt();
             car.moveIfPossible(randomValue);
         }
     }
 
-    String formatRoundResult() {
+    public String formatRoundResult() {
         StringBuilder result = new StringBuilder();
         for (Car car : cars) {
             result.append(formatCarPosition(car));
@@ -46,7 +47,7 @@ class Cars {
         return car.getName() + separator + positionSymbol.repeat((int) car.getPosition());
     }
 
-    List<String> getWinners() {
+    public List<String> getWinners() {
         long maxPosition = findMaxPosition();
         return cars.stream()
                 .filter(car -> car.getPosition() == maxPosition)

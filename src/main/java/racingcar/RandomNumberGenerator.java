@@ -2,14 +2,14 @@ package racingcar;
 
 import camp.nextstep.edu.missionutils.Randoms;
 
-class RandomNumberGenerator {
+public class RandomNumberGenerator {
     private static final int MIN_VALUE = 0;
     private static final int MAX_VALUE = 9;
 
     private RandomNumberGenerator() {
     }
 
-    static int generate() {
+    public static int generate() {
         return Randoms.pickNumberInRange(MIN_VALUE, MAX_VALUE);
     }
 }
