@@ -3,8 +3,8 @@ package racingcar;
 class Car {
     private static final int MOVE_THRESHOLD = 4;
 
-    final String name;
-    long position;
+    private final String name;
+    private long position;
 
     public Car(String name) {
         CarValidator.validateName(name);
@@ -12,17 +12,17 @@ class Car {
         this.position = 0L;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public void moveIfPossible(int randomValue) {
+    void moveIfPossible(int randomValue) {
         if (randomValue >= MOVE_THRESHOLD) {
             this.position++;
         }
     }
 
-    public long getPosition() {
+    long getPosition() {
         return position;
     }
 }

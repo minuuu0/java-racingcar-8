@@ -4,8 +4,6 @@ import java.util.List;
 
 class OutputView {
 
-    private static final String POSITION_SYMBOL = "-";
-    private static final String NAME_POSITION_SEPARATOR = " : ";
     private static final String WINNER_SEPARATOR = ", ";
 
     private OutputView() {
@@ -16,17 +14,9 @@ class OutputView {
         System.out.println("실행 결과");
     }
 
-    static void printRoundResult(List<Car> cars) {
-        for (Car car : cars) {
-            printCarPosition(car);
-        }
+    static void printRoundResult(String roundResult) {
+        System.out.print(roundResult);
         System.out.println();
-    }
-
-    private static void printCarPosition(Car car) {
-        System.out.print(car.getName());
-        System.out.print(NAME_POSITION_SEPARATOR);
-        System.out.println(POSITION_SYMBOL.repeat((int) car.getPosition()));
     }
 
     static void printWinners(List<String> winners) {

@@ -13,7 +13,7 @@ class RacingGame {
         OutputView.printRaceStart();
         for (int i = 0; i < attemptCount; i++) {
             playRound();
-            OutputView.printRoundResult(cars.getCars());
+            OutputView.printRoundResult(cars.formatRoundResult());
         }
     }
 
@@ -23,9 +23,6 @@ class RacingGame {
     }
 
     private void playRound() {
-        for (Car car : cars.getCars()) {
-            int randomValue = RandomNumberGenerator.generate();
-            car.moveIfPossible(randomValue);
-        }
+        cars.moveAll();
     }
 }
