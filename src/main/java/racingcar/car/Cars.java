@@ -1,6 +1,5 @@
 package racingcar.car;
 
-import racingcar.RandomNumberGenerator;
 import java.util.List;
 import java.util.function.IntSupplier;
 
@@ -13,16 +12,14 @@ public class Cars {
                 .toList();
     }
 
+    // only TEST
+    Cars(Car... cars) {
+        this.cars = List.of(cars);
+    }
+
+    // only TEST
     int size() {
         return cars.size();
-    }
-
-    List<Car> getCars() {
-        return cars;
-    }
-
-    public void moveAll() {
-        moveAllWith(RandomNumberGenerator::generate);
     }
 
     public void moveAllWith(IntSupplier randomSupplier) {

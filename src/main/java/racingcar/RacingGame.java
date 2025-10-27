@@ -1,7 +1,7 @@
 package racingcar;
 
-import racingcar.car.Cars;
 import java.util.List;
+import racingcar.car.Cars;
 
 class RacingGame {
     private final Cars cars;
@@ -13,7 +13,7 @@ class RacingGame {
     void play(int attemptCount) {
         OutputView.printRaceStart();
         for (int i = 0; i < attemptCount; i++) {
-            playRound();
+            cars.moveAllWith(RandomNumberGenerator::generate);
             OutputView.printRoundResult(cars.formatRoundResult());
         }
     }
@@ -23,7 +23,4 @@ class RacingGame {
         OutputView.printWinners(winners);
     }
 
-    private void playRound() {
-        cars.moveAll();
-    }
 }

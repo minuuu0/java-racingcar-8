@@ -17,24 +17,12 @@ class CarsTest {
     }
 
     @Test
-    void 자동차_목록을_가져온다() {
-        List<String> carList = List.of("pobi", "woni", "jun");
-        Cars cars = new Cars(carList);
-
-        List<Car> carsList = cars.getCars();
-
-        assertThat(carsList).hasSize(3);
-        assertThat(carsList.get(0).getName()).isEqualTo("pobi");
-        assertThat(carsList.get(1).getName()).isEqualTo("woni");
-        assertThat(carsList.get(2).getName()).isEqualTo("jun");
-    }
-
-    @Test
     void 우승자가_한_명일_때_우승자를_반환한다() {
-        List<String> carList = List.of("pobi", "woni", "jun");
-        Cars cars = new Cars(carList);
-
-        cars.getCars().get(0).moveIfPossible(4);
+        Cars cars = new Cars(
+                new Car("pobi", 2),
+                new Car("woni", 0),
+                new Car("jun", 1)
+        );
 
         List<String> winners = cars.getWinners();
 
@@ -44,13 +32,11 @@ class CarsTest {
 
     @Test
     void 우승자가_여러_명일_때_모든_우승자를_반환한다() {
-        List<String> carList = List.of("pobi", "woni", "jun");
-        Cars cars = new Cars(carList);
-
-        cars.getCars().get(0).moveIfPossible(4);
-        cars.getCars().get(0).moveIfPossible(4);
-        cars.getCars().get(2).moveIfPossible(4);
-        cars.getCars().get(2).moveIfPossible(4);
+        Cars cars = new Cars(
+                new Car("pobi", 2),
+                new Car("woni", 1),
+                new Car("jun", 2)
+        );
 
         List<String> winners = cars.getWinners();
 
