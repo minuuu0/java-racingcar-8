@@ -37,7 +37,7 @@ class ApplicationTest extends NsTest {
     @ValueSource(strings = {"pobi.woni", "pobi,woni.javaji", "pobi woni"})
     void 쉼표_외_다른_문자로_구분한_입력은_예외를_발생시킨다(String carNames) {
         assertSimpleTest(() ->
-                assertThatThrownBy(() -> runException(carNames))
+                assertThatThrownBy(() -> runException(carNames, "5"))
                         .isExactlyInstanceOf(IllegalArgumentException.class)
         );
     }

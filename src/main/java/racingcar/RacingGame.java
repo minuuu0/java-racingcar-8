@@ -10,17 +10,19 @@ class RacingGame {
         this.cars = new Cars(carNames);
     }
 
-    void play(int attemptCount) {
-        OutputView.printRaceStart();
-        for (int i = 0; i < attemptCount; i++) {
-            cars.moveAllWith(RandomNumberGenerator::generate);
-            OutputView.printRoundResult(cars.getCarNames(), cars.getCarPositions());
-        }
+    void playRound() {
+        cars.moveAllWith(RandomNumberGenerator::generate);
     }
 
-    void announceWinners() {
-        List<String> winners = cars.getWinners();
-        OutputView.printWinners(winners);
+    List<String> getCarNames() {
+        return cars.getCarNames();
     }
 
+    List<Long> getCarPositions() {
+        return cars.getCarPositions();
+    }
+
+    List<String> getWinners() {
+        return cars.getWinners();
+    }
 }
