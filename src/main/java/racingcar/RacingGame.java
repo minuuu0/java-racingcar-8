@@ -11,7 +11,8 @@ class RacingGame {
     }
 
     void playRound() {
-        cars.moveAllWith(RandomNumberGenerator::generate);
+        int randomValue = RandomNumberGenerator.generate();
+        cars.moveAll(randomValue);
     }
 
     List<String> getCarNames() {

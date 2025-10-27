@@ -1,7 +1,6 @@
 package racingcar.car;
 
 import java.util.List;
-import java.util.function.IntSupplier;
 
 public class Cars {
     private final List<Car> cars;
@@ -22,9 +21,8 @@ public class Cars {
         return cars.size();
     }
 
-    public void moveAllWith(IntSupplier randomSupplier) {
+    public void moveAll(int randomValue) {
         for (Car car : cars) {
-            int randomValue = randomSupplier.getAsInt();
             car.moveIfPossible(randomValue);
         }
     }
