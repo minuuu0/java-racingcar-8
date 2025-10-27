@@ -1,6 +1,6 @@
 package racingcar;
 
-public class Car {
+class Car {
     private static final int MOVE_THRESHOLD = 4;
 
     final String name;

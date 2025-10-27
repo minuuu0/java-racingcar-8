@@ -1,6 +1,6 @@
 package racingcar;
 
-public class InputValidator {
+class InputValidator {
 
     private InputValidator() {
     }

@@ -4,7 +4,7 @@ import camp.nextstep.edu.missionutils.Console;
 import java.util.Arrays;
 import java.util.List;
 
-public class InputView {
+class InputView {
 
     private static final String CAR_NAME_DELIMITER = ",";
 

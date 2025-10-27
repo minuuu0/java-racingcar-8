@@ -2,7 +2,7 @@ package racingcar;
 
 import java.util.List;
 
-public class OutputView {
+class OutputView {
 
     private static final String POSITION_SYMBOL = "-";
     private static final String NAME_POSITION_SEPARATOR = " : ";
